@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>> Generate a secure password
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider round"></span>
+      </label>
+    </h2>
+
+    <div class="password-box">
+      <input type="text" id="password" readonly />
+      <button onclick="copyPassword()">📋</button>
+    </div>
+
+    <div class="options">
+      <h3>Customize your password</h3>
+      <div class="settings">
+        <div class="left-options">
+          <label><input type="checkbox" id="uppercase" checked /> Uppercase</label>
+          <label><input type="checkbox" id="lowercase" checked /> Lowercase</label>
+          <label><input type="checkbox" id="numbers" checked /> Numeric</label>
+          <label><input type="checkbox" id="symbols" /> Symbols</label>
+        </div>
+        <div class="right-options">
+          <label class="length-label">Password Length:</label>
+          <input type="number" id="length-number" min="4" max="100" value="20">
+          <input type="range" id="length-range" min="4" max="100" value="20">
+        </div>
+      </div>
+    </div>
+
+    <button class="generate-btn" onclick="generatePassword()">Generate</button>
+
+    <div class="footer">
+      Made with ❤️ by <a href="#" target="_blank">Harshwardhan</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
